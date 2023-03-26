@@ -62,7 +62,7 @@ function renderCountry(data) {
     <h1 class=country-info_name>${name.official}</h1></div>
     <p class=country-info_capital>Capital: <span class=country-info_span>${capital}</span></p>
     <p class=country-info_population>Population: <span class=country-info_span>${population}</span></p>
-    <p class=country-info_languages>Languages: <span class=country-info_span>${languages.ukr}</span></p>`
+    <p class=country-info_languages>Languages: <span class=country-info_span>${Object.values(languages)}</span></p>`
     })
     .join('');
     
