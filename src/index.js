@@ -5,7 +5,7 @@ import Notiflix from 'notiflix';
 import { fetchCountries } from './fetchCountries';
 
 
-const DEBOUNCE_DELAY = 500;
+const DEBOUNCE_DELAY = 300;
 let inputValue = "";
 
 // находим inputEl
@@ -58,11 +58,11 @@ function renderCountry(data) {
 
       const markup = data.map(({ name, capital, population, flags, languages }) => {
      
-    return `<img src=${flags.svg} alt = ${name.official} width="50" height="50">
-    <h1>${name.official}</h1>
-    <p>Capital: ${capital}</p>
-    <p>Population: ${population}</p>
-    <p>Languages: ${languages.ukr}</p>`
+    return `<div class=country-info_groop><img src=${flags.svg} class=country-info_img alt = ${name.official} width="160" height="100">
+    <h1 class=country-info_name>${name.official}</h1></div>
+    <p class=country-info_capital>Capital: <span class=country-info_span>${capital}</span></p>
+    <p class=country-info_population>Population: <span class=country-info_span>${population}</span></p>
+    <p class=country-info_languages>Languages: <span class=country-info_span>${languages.ukr}</span></p>`
     })
     .join('');
     
@@ -73,11 +73,10 @@ function renderCountry(data) {
 function renderCountrys(data) {
 const markup = data.map(({ name, flags}) => {
      
-    return `<img src=${flags.svg} alt = ${name.official} width="50" height="50">
-    <h1>${name.official}</h1>`
+    return `<li class=country-list_item><img src=${flags.svg} class=country-list_img alt = ${name.official} width="40" height="30">
+    <h1>${name.official}</h1></li>`
     })
     .join('');
-
     
     ulEl.innerHTML = markup;
 }

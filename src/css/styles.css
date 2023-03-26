@@ -7,9 +7,10 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg");background-size: cover;
   color: #212121;
   line-height: 1.5;
+
 }
 
 #search-box {
@@ -17,4 +18,45 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  border-radius: 10px;
+  border-color: chocolate;
+  background-color: antiquewhite;
+  
+}
+
+.country-info {
+font-size: 20px;
+}
+
+.country-info_groop {
+  display: flex;
+  align-items: center;
+}
+
+.country-info_img {
+margin-right: 15px;
+}
+
+.country-info_capital,
+.country-info_population, 
+.country-info_languages {
+font-size: 25px;
+font-weight: 800;
+}
+
+.country-info_span
+ {
+font-size: 20px;
+font-weight: 500;
+}
+
+.country-list_item {
+display: flex;
+align-items: center;
+font-size: 8px;
+margin-bottom: 5px;
+}
+
+.country-list_img {
+margin-right: 15px;
 }
